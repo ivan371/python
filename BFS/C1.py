@@ -16,13 +16,12 @@ def dijkstra(G, start):
         used.add(current)
     return d
 
-n, m = map(int,input().split())
+n, m, x, y = map(int,input().split())
 d = {}
 for i in range(m):
     u, v = map(int, input().split())
     d[u] = {v: 1}
     d[v] = {u: 1}
 
-dic = dijkstra(d, 0)
-for i in range(n):
-    print(dic[i])
+dic = dijkstra(d, x)
+print(dic[y])
